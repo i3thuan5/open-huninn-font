@@ -3,7 +3,7 @@ from 用字 import 教典名姓
 from 用字 import 建議
 from csv import DictWriter
 from itertools import chain
-from sys import stderr
+from sys import argv, stderr
 
 
 def sng(huninnpio, mia, pio):
@@ -24,7 +24,7 @@ def sng(huninnpio, mia, pio):
 
 if __name__ == '__main__':
     huninnpio = set()
-    with open('huninn-pio') as tong:
+    with open(argv[1]) as tong:
         for tsua in tong.readlines():
             if tsua.rstrip():
                 huninnpio.add(chr(int(tsua.rstrip(), 16)))
