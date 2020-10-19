@@ -9,7 +9,7 @@
 ```
 sudo apt install fonttools
 ttx font/*.ttf
-cat font/*.ttx | grep -i 'code="0x[0-9a-f]*"' -o | sort -u  | grep '0x[0-9a-f]*' > huninn-pio
+cat font/*.ttx | grep -i 'code="0x[0-9a-f]*"' -o | sort -u  | grep '0x[0-9a-f]*' -o > huninn-pio
 python3.7 -m virtualenv --python python3.7 venv
 source venv/bin/activate 
 pip install kau3-tian2-iong7-ji7
